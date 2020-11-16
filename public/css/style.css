@@ -1,0 +1,72 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em;
+}
+.header-buttons{
+    align-items: center;
+}
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    height: 80vh;
+    width: 80vw;
+    background: transparent linear-gradient(180deg, #290000 0%, #202020 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    mix-blend-mode: unset;
+    border: 1px solid #000000;
+    border-radius: 38px;
+    padding: 0;
+
+}
+button{
+    background: #FF0000 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 45px;
+    opacity: 1;
+    height: 3.5em;
+    width: 10em;
+    font: normal normal normal Segoe UI;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 1;
+}
+input{
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 45px;
+    opacity: 1;
+    margin: 1em;
+    height: 5em;
+    width: 20em;
+    font: normal normal normal Segoe UI;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.text{
+    text-align: left;
+    align-items: baseline;
+    font: normal normal normal Segoe UI;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+}
