@@ -1,17 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0em;
+    width: 100%;
+    height: 60px;
+    display: block;
+    background-color: white;
 }
-.header-buttons{
-    align-items: center;
+.inner_header{
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0;
 }
-body{
-    margin: 0%;
-    padding: 0%;
+.logo_container{
+    height: 100%;
+    display: table;
+    float: left;
+    padding-left: 10%;
 }
-.container{
+.logo_container h1{
+    color: black;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: 1000;
+}
+.logo_container h1 span{
+    font-weight: 100;
+}
+.header_buttons{
+    float: right;
+    height: 100%;
+}
+.header_buttons button{
+    height: 100%;
+    width: 10em;
+    display: table;
+    float: right;
+    padding: 0px 20px;
+    color: white;
+    background: #D31023 0% 0% no-repeat padding-box;
+    border: 1px solid #ffffff;
+    border-radius: 45px;
+}
+main{
     width: 100vw;
     height: 100vh;
     background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
@@ -20,37 +56,24 @@ body{
     justify-content: center;
     align-items: center;
 }
-form{
+.form{
     display: flex;
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    height: 80vh;
-    width: 80vw;
+    height: 75vh;
+    width: 75vw;
     background: transparent linear-gradient(180deg, #290000 0%, #202020 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     mix-blend-mode: unset;
     border: 1px solid #000000;
     border-radius: 38px;
     padding: 0;
-
+    color: white;
 }
-button{
-    background: #FF0000 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
-    border-radius: 45px;
-    opacity: 1;
-    height: 3.5em;
-    width: 10em;
-    font: normal normal normal Segoe UI;
-    letter-spacing: 0px;
-    text-align: center;
-    color: #FFFFFF;
-    opacity: 1;
-}
-input{
+.form input{
     background: #000000 0% 0% no-repeat padding-box;
-    border: 1px solid #707070;
+    border: 1px solid #000000;
     border-radius: 45px;
     opacity: 1;
     margin: 1em;
@@ -62,11 +85,113 @@ input{
     color: #FFFFFF;
     opacity: 1;
 }
-.text{
-    text-align: left;
-    align-items: baseline;
-    font: normal normal normal Segoe UI;
+.form button{
+    color: white;
+    background: #D31023 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    width: 12em;
+    height: 5em;
+    color: white;
+    margin: 1em;
+}
+.base-container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90%;
+}
+nav{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 90%;
+    float: left;
+}
+nav button{
+    color: white;
+    background: #D31023 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    width: 80%;
+    height: 5em;
+    color: white;
+    margin: 1em;
+}
+.search_bar input{
+    text-align: center;
+    font: normal normal normal 32px/45px Segoe UI;
     letter-spacing: 0px;
+    color: #7A7A7A;
+    size: 0.5em;
+}
+.nav_buttons{
+    margin: 1em;
+    padding: 1em;
+}
+main{
+    width: 100%;
+    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
     color: #FFFFFF;
-    opacity: 1;
+    height: 100vh;
+}
+.main2{
+    width: 80%;
+    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
+    color: #FFFFFF;
+    height: 100vh;
+}
+.section_title{
+    text-align: center;
+    font: italic normal 900 65px/86px Segoe UI;
+    letter-spacing: 0px;
+    color: #D00014;
+    opacity: 0.45;
+}
+.my_games{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+main h1{
+    text-align: center;
+    color: #FF0000;
+}
+.game{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #95989A;
+    color: #000000;
+    height: auto;
+    width: auto;
+}
+.game h4{
+    color: #B20011;
+    display: inline;
+    justify-content: space-between;
+}
+.game_photo{
+    height: 25vh;
+    width: 25vw;
+}
+.players{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.player{
+    background: #3a3a3a 0% 0% no-repeat padding-box;
+    color: #ffffff;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+.player_photo{
+    width: 120px;
+    height: 120px;
+    background: transparent 0% 0% no-repeat padding-box;
+    border: 1px solid #B20011;
 }
