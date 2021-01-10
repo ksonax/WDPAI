@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <div class="form">
+        <div class="form" action="login" method="POST">
             <h1>Sign In</h1>
             <div class="messages">
                 <?php
@@ -31,8 +31,8 @@
                 ?>
             </div>
             <input type="text" placeholder="Username">
-            <input type="text" placeholder="Password">
-            <button>Sign In</button>
+            <input type="password" placeholder="Password">
+            <button type="submit">Sign In</button>
             <p>Need an account?</p>
             <button>Sign Up</button>
         </div>
