@@ -45,7 +45,7 @@
         <main class="main2">
             <div>
                 <h1 class="section_title">Players</h1>
-            </dv>
+            </div>
             <section  class="players">
                 <div class="player">
                     <img class="player_photo" src="public/img/avatar.png" alt="placeholder">

@@ -45,7 +45,7 @@
         <main class="main2">
             <div>
                 <h1 class="section_title">My Games</h1>
-            </dv>
+            </div>
             <section  class="my_games">
                 <div class="game">
                     <img class="game_photo" src="public/img/unnamed.jpg" alt="placeholder">

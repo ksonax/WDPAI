@@ -21,6 +21,15 @@
     <main>
         <div class="form">
             <h1>Sign In</h1>
+            <div class="messages">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
             <input type="text" placeholder="Username">
             <input type="text" placeholder="Password">
             <button>Sign In</button>
