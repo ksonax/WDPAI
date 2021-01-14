@@ -5,6 +5,12 @@ require_once 'AppController.php';
 class DefaultController extends AppController{
 
     public function index() {
+        //TODO display main_page.php
+        $this->render('main_page');
+
+    }
+
+    public function login() {
         //TODO display login.php
         $this->render('login');
 
