@@ -8,5 +8,6 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('main_page', 'DefaultController');
 Routing::get('login', 'SecurityController');
+Routing::get('register', 'DefaultController');
 Routing::get('explore_games', 'DefaultController');
 Routing::run($path);
