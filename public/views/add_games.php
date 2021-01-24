@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Games</title>
+    <title>Add Games</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
@@ -45,37 +45,25 @@
         </nav>
         <main class="main2">
             <div>
-                <h1 class="section_title">Explore Games</h1>
+                <h1 class="section_title">ADD Games</h1>
             </div>
             <section  class="my_games">
-                <div class="game">
-                    <img class="game_photo" src="public/img/uploads/test.png">
-                    <h3>Game Title</h3>
-                    <p>Game description</p>
-                    <h4>Players Online</h4>
-                    <h4>Players Waiting</h4>
-                </div>
-                <div class="game">
-                    <img class="game_photo" src="public/img/unnamed.jpg" alt="placeholder">
-                    <h3>Game Title</h3>
-                    <p>Game description</p>
-                    <h4>Players Online</h4>
-                    <h4>Players Waiting</h4>
-                </div>
-                <div class="game">
-                    <img class="game_photo" src="public/img/unnamed.jpg" alt="placeholder">
-                    <h3>Game Title</h3>
-                    <p>Game description</p>
-                    <h4>Players Online</h4>
-                    <h4>Players Waiting</h4>
-                </div>
-                <div class="game">
-                    <img class="game_photo" src="public/img/unnamed.jpg" alt="placeholder">
-                    <h3>Game Title</h3>
-                    <p>Game description</p>
-                    <h4>Players Online</h4>
-                    <h4>Players Waiting</h4>
-                </div>
+                <form action="add_games" method="POST" ENCTYPE="multipart/form-data">
+                    <div class="messages">
+                        <?php
+                        if(isset($messages)){
+                            foreach($messages as $message) {
+                                echo $message;
+                            }
+                        }
+                        ?>
+                    </div>
+                    <input type="title" type="text" placeholder="title">
+                    <textarea name ="description" rows="5" placeholder="description"></textarea>
+
+                    <input type="file" name="file">
+                    <button type="submit">ADD GAME</button>
+                </form>
             </section>
         </main>
     </div>

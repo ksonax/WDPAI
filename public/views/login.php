@@ -19,7 +19,7 @@
         </div>
     </header>
     <main>
-        <div class="form" action="login" method="POST">
+        <div class="form" action="login" method="post">
             <h1>Sign In</h1>
             <div class="messages">
                 <?php
