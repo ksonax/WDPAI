@@ -29,16 +29,16 @@
             <div class="nav_buttons">
                 <ul>
                     <li>
-                        <button>My Games</button>
+                        <button onclick="location.href='my_games'">My Games</button>
                     </li>
                     <li>
-                        <button>Explore Games</button>
+                        <button onclick="location.href='explore_games'">Explore Games</button>
                     </li>
                     <li>
-                        <button>Players and Teams</button>
+                        <button onclick="location.href='players'">Players</button>
                     </li>
                     <li>
-                        <button>Friend List</button>
+                        <button onclick="location.href='my_friends.php'">Friend List</button>
                     </li>
                 </ul>
             </div>

@@ -13,8 +13,8 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button>Sign In</button>
-                <button>Sing Up</button>
+                <button onclick="location.href='login'">Sign In</button>
+                <button onclick="location.href='register'">Sing Up</button>
             </div>
         </div>
     </header>
@@ -34,7 +34,7 @@
             <input type="password" placeholder="Password">
             <button type="submit">Sign In</button>
             <p>Need an account?</p>
-            <button>Sign Up</button>
+            <button onclick="location.href='register'">Sign Up</button>
         </div>
     </main>
 </body>

@@ -13,8 +13,8 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button>Sign In</button>
-                <button>Sing Up</button>
+                <button onclick="location.href='login'">Sign In</button>
+                <button onclick="location.href='register'">Sing Up</button>
             </div>
         </div>
     </header>
@@ -25,7 +25,7 @@
             <input name="email" type="text" placeholder="Enter email">
             <input name="password" type="text" placeholder="Enter password">
             <input name="password" type="text" placeholder="Confirm password">
-            <button>Sign Up Now</button>
+            <button type="submit">Sign Up Now</button>
         </div>
     </main>
 </body>
