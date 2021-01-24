@@ -9,5 +9,8 @@ Routing::get('', 'DefaultController');
 Routing::get('main_page', 'DefaultController');
 Routing::get('login', 'SecurityController');
 Routing::get('register', 'DefaultController');
+Routing::get('my_games', 'DefaultController');
 Routing::get('explore_games', 'DefaultController');
+Routing::get('players', 'DefaultController');
+Routing::get('my_friends', 'DefaultController');
 Routing::run($path);
