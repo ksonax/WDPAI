@@ -38,7 +38,7 @@
                         <button onclick="location.href='players'">Players</button>
                     </li>
                     <li>
-                        <button onclick="location.href='my_friends.php'">Friend List</button>
+                        <button onclick="location.href='my_friends'">Friend List</button>
                     </li>
                 </ul>
             </div>
