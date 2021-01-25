@@ -13,29 +13,29 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button onclick="location.href='login'">Sign In</button>
+                <button>Sign In</button>
                 <button onclick="location.href='register'">Sing Up</button>
             </div>
         </div>
     </header>
     <main>
-        <div class="form" action="login" method="post">
+        <form class="form" action="login" method="POST">
             <h1>Sign In</h1>
             <div class="messages">
                 <?php
-                if(isset($messages)){
-                    foreach($messages as $message) {
-                        echo $message;
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
+                        }
                     }
-                }
                 ?>
             </div>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input name="email" type="text" " placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
             <button type="submit">Sign In</button>
             <p>Need an account?</p>
             <button onclick="location.href='register'">Sign Up</button>
-        </div>
+        </form>
     </main>
 </body>
 </html>
