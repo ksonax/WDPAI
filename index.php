@@ -11,8 +11,10 @@ Routing::get('my_games', 'DefaultController');
 Routing::get('explore_games', 'DefaultController');
 Routing::get('players', 'DefaultController');
 Routing::get('my_friends', 'DefaultController');
+
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
+
 Routing::post('add_games', 'GameController');
 
 Routing::run($path);
