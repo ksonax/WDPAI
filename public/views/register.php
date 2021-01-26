@@ -18,14 +18,23 @@
             </div>
         </div>
     </header>
-    <main> 
-        <div class="form">
+    <main>
+        <form class="register" action="register" method="POST">
             <h1 class="text"> Sign UP </h1>
-            <input name="username" type="text" placeholder="Enter username">
+            <div class="messages">
+                <?php
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
+                    }
+                }
+                ?>
+            </div>
+            <input name="user_name" type="text" placeholder="Enter username">
             <input name="email" type="text" placeholder="Enter email">
-            <input name="password" type="text" placeholder="Enter password">
-            <input name="password" type="text" placeholder="Confirm password">
+            <input name="password" type="password" placeholder="Enter password">
+            <input name="confirmedPassword" type="password" placeholder="Confirm password">
             <button type="submit">Sign Up Now</button>
-        </div>
+        </form>
     </main>
 </body>
