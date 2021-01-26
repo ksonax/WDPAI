@@ -2,12 +2,23 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/Games.php';
+require_once __DIR__.'/../repository/GameRepository.php';
+
 
 class GameController extends AppController
 {
     const MAX_FILE_SIZE = 1024*1024;
     const SUPPORTED_TYPES = ['image/png', 'image/jpeg'];
     const UPLOAD_DIRECTORY = '/../public/img/uploads/';
+
+    private $message = [];
+    private $gameRepository;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->gameRepository = new GameRepository();
+    }
 
     public function add_games()
     {
@@ -18,7 +29,9 @@ class GameController extends AppController
             );
 
             // TODO create new project object and save it in database
-            $project = new Games($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $game = new Games($_POST['title'], $_POST['description'], $_FILES['file']['name']);
+            $this->gameRepository->addGame($game);
+
 
             return $this->render('explore_games', ['messages' => $this->message]);
         }

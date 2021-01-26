@@ -58,10 +58,10 @@
                         }
                         ?>
                     </div>
-                    <input type="title" type="text" placeholder="title">
+                    <input name="title" type="text" placeholder="title">
                     <textarea name ="description" rows="5" placeholder="description"></textarea>
 
-                    <input type="file" name="file">
+                    <input type="file" name="file"><br/>
                     <button type="submit">ADD GAME</button>
                 </form>
             </section>
