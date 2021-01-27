@@ -8,7 +8,7 @@ $path = parse_url($path, PHP_URL_PATH);
 Routing::get('', 'DefaultController');
 Routing::get('main_page', 'DefaultController');
 Routing::get('my_games', 'DefaultController');
-Routing::get('explore_games', 'DefaultController');
+Routing::get('explore_games', 'GameController');
 Routing::get('players', 'DefaultController');
 Routing::get('my_friends', 'DefaultController');
 

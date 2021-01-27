@@ -45,4 +45,25 @@ class GameRepository extends Repository
             $date->format('Y-m-d')
         ]);
     }
+
+    public function getGames(): array
+    {
+        $result = [];
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM games;
+        ');
+        $stmt->execute();
+        $games = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+         foreach ($games as $game) {
+             $result[] = new Games(
+                 $game['title'],
+                 $game['description'],
+                 $game['image']
+             );
+         }
+
+        return $result;
+    }
 }
