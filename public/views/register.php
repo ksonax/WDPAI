@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./public/js/script.js" defer></script>
     <title>Register Page</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>

@@ -150,7 +150,7 @@ main{
     color: #D00014;
     opacity: 0.45;
 }
-.my_games{
+.games{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
@@ -160,7 +160,7 @@ main h1{
     text-align: center;
     color: #FF0000;
 }
-.game{
+.explore_games{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #95989A;
     color: #000000;
@@ -194,5 +194,11 @@ main h1{
     height: 120px;
     background: transparent 0% 0% no-repeat padding-box;
     border: 1px solid #B20011;
+}
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }
 

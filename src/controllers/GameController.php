@@ -37,6 +37,11 @@ class GameController extends AppController
         }
         return $this->render('add_games', ['messages' => $this->message]);
     }
+    public function explore_games()
+    {
+        $games = $this->gameRepository->getGames();
+        $this->render('explore_games', ['games' => $games]);
+    }
 
     private function validate(array $file): bool
     {
