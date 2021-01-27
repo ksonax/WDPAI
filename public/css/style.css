@@ -120,7 +120,7 @@ nav button{
     color: white;
     margin: 1em;
 }
-.search_bar input{
+.search-bar input{
     text-align: center;
     font: normal normal normal 32px/45px Segoe UI;
     letter-spacing: 0px;
@@ -144,23 +144,30 @@ main{
     height: 100vh;
 }
 .section_title{
-    text-align: center;
+    text-align: left;
     font: italic normal 900 65px/86px Segoe UI;
     letter-spacing: 0px;
     color: #D00014;
     opacity: 0.45;
 }
-.my_games{
+.explore_games{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 15px;
 }
+.explore_games img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    height: 25vh;
+    width: 25vw;
+}
 main h1{
     text-align: center;
     color: #FF0000;
 }
-.game{
+.explore_games div{
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #95989A;
     color: #000000;
@@ -194,5 +201,11 @@ main h1{
     height: 120px;
     background: transparent 0% 0% no-repeat padding-box;
     border: 1px solid #B20011;
+}
+.no-valid {
+    border: 3px solid red;
+    border-radius: 1em;
+    box-shadow: 0 0 0.2em red;
+    outline: none;
 }
 

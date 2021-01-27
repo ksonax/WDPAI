@@ -16,11 +16,6 @@ class DefaultController extends AppController{
 
     }
 
-    public function explore_games() {
-        //TODO display explore_games.html
-        $this->render('explore_games');
-    }
-
     public function my_friends() {
         //TODO display explore_games.html
         $this->render('my_friends');

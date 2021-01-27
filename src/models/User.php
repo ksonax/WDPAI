@@ -24,5 +24,10 @@ class User
         return $this->password;
     }
 
+    public function getUserName(): string
+    {
+        return $this->user_name;
+    }
+
 
 }
