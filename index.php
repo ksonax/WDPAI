@@ -14,7 +14,7 @@ Routing::get('my_friends', 'DefaultController');
 
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
-
 Routing::post('add_games', 'GameController');
+Routing::post('search', 'GameController');
 
 Routing::run($path);

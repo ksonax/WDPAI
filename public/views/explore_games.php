@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>Explore Games</title>
     <link rel="stylesheet" href="public/css/style.css">
 </head>
@@ -21,11 +22,12 @@
         </div>
     </header>
 </header>
-    <div class="base_container">
-        <nav>
-            <div class="search_bar">
+    <header class="base_container">
+            <div class="search-bar">
                 <input placeholder="Search">
             </div>
+    </header>
+        <nav>
             <div class="nav_buttons">
                 <ul>
                     <li>
@@ -43,10 +45,8 @@
                 </ul>
             </div>
         </nav>
+        <h1 class="section_title">Explore Games</h1>
         <main class="main2">
-            <div>
-                <h1 class="section_title">Explore Games</h1>
-            </div>
             <section  class="explore_games">
                 <?php foreach($games as $game): ?>
                     <div id="game-1">
@@ -61,5 +61,17 @@
                 <?php endforeach; ?>
             </section>
         </main>
-    </div>
+    </header>
 </body>
+
+<template id="game-template">
+    <div id="">
+        <img src="">
+        <div>
+            <h3>title</h3>
+            <p>description</p>
+            <h4 class="online">Players Online</h4>
+            <h4 class="waiting">Players Waiting</h4>
+        </div>
+    </div>
+</template>
