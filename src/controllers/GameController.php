@@ -22,6 +22,7 @@ class GameController extends AppController
 
     public function add_games()
     {
+        $games = $this->gameRepository->getGames();
         if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
             move_uploaded_file(
                 $_FILES['file']['tmp_name'],
@@ -32,8 +33,7 @@ class GameController extends AppController
             $game = new Games($_POST['title'], $_POST['description'], $_FILES['file']['name']);
             $this->gameRepository->addGame($game);
 
-
-            return $this->render('explore_games', ['messages' => $this->message]);
+            return $this->render('explore_games', ['games' => $games]);
         }
         return $this->render('add_games', ['messages' => $this->message]);
     }
@@ -41,6 +41,21 @@ class GameController extends AppController
     {
         $games = $this->gameRepository->getGames();
         $this->render('explore_games', ['games' => $games]);
+    }
+
+    public function search()
+    {
+        $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
+
+        if ($contentType === "application/json") {
+            $content = trim(file_get_contents("php://input"));
+            $decoded = json_decode($content, true);
+
+            header('Content-type: application/json');
+            http_response_code(200);
+
+            echo json_encode($this->gameRepository->getGameByTitle($decoded['search']));
+        }
     }
 
     private function validate(array $file): bool
@@ -56,5 +71,7 @@ class GameController extends AppController
         }
         return true;
     }
+
+
 
 }
