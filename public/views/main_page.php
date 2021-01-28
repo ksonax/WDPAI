@@ -13,8 +13,8 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button>Sign In</button>
-                <button>Sing Up</button>
+                <button onclick="location.href='login'">Sign In</button>
+                <button onclick="location.href='register'">Sing Up</button>
             </div>
         </div>
     </header>
@@ -22,7 +22,7 @@
         <div class ="main_text">
             <h1 style="font-size: 60px">GAMENTER</h1>
             <h3>We play Games here!!!</h3>
-            <button>JOIN US!</button>
+            <button onclick="location.href='register'">JOIN US!</button>
         </div>
     </div>
     <div class="info">
