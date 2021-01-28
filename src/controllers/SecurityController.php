@@ -58,7 +58,7 @@ class SecurityController extends AppController {
         }
 
         //TODO try to use better hash function
-        $user = new User($email, md5($password), $user_name);
+        $user = new User($email, $password, $user_name);
 
         $this->userRepository->addUser($user);
 

@@ -23,11 +23,11 @@
             <h1>Sign In</h1>
             <div class="messages">
                 <?php
-                    if(isset($messages)){
-                        foreach($messages as $message) {
-                            echo $message;
-                        }
+                if(isset($messages)){
+                    foreach($messages as $message) {
+                        echo $message;
                     }
+                }
                 ?>
             </div>
             <input name="email" type="text" " placeholder="Username">

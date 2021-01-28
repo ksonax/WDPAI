@@ -20,7 +20,7 @@
         </div>
     </header>
     <main>
-        <form class="register" action="register" method="POST">
+        <form class="form" action="register" method="POST">
             <h1 class="text"> Sign UP </h1>
             <div class="messages">
                 <?php
