@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<header>
     <header>
         <div class="inner_header">
             <div class="logo_container">
@@ -21,13 +20,11 @@
             </div>
         </div>
     </header>
-</header>
-    <header class="base_container">
+    <main>
+        <nav>
             <div class="search-bar">
                 <input placeholder="Search">
             </div>
-    </header>
-        <nav>
             <div class="nav_buttons">
                 <ul>
                     <li>
@@ -45,8 +42,10 @@
                 </ul>
             </div>
         </nav>
-        <h1 class="section_title">Explore Games</h1>
-        <main class="main2">
+        <div>
+            <div class="section_title">
+                <h4>Explore Games</h4>
+            </div>
             <section  class="explore_games">
                 <?php foreach($games as $game): ?>
                     <div id="game-1">
@@ -60,8 +59,8 @@
                     </div>
                 <?php endforeach; ?>
             </section>
-        </main>
-    </header>
+        </div>
+    </main>
 </body>
 
 <template id="game-template">

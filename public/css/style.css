@@ -43,7 +43,7 @@ header{
     float: right;
     padding: 0px 20px;
     color: white;
-    background: #D31023 0% 0% no-repeat padding-box;
+    background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #ffffff;
     border-radius: 45px;
 }
@@ -55,6 +55,10 @@ main{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+main h1{
+    text-align: center;
+    color: #FF0000;
 }
 .form{
     display: flex;
@@ -87,7 +91,7 @@ main{
 }
 .form button{
     color: white;
-    background: #D31023 0% 0% no-repeat padding-box;
+    background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #000000;
     border-radius: 45px;
     width: 12em;
@@ -96,23 +100,22 @@ main{
     margin: 1em;
 }
 .base-container{
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     height: 90%;
 }
 nav{
-    width: 20%;
+    background: white;
+    width: 25%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 90%;
-    float: left;
+    height: 100%;
 }
 nav button{
     color: white;
-    background: #D31023 0% 0% no-repeat padding-box;
+    background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #000000;
     border-radius: 45px;
     width: 80%;
@@ -131,30 +134,26 @@ nav button{
     margin: 1em;
     padding: 1em;
 }
-main{
-    width: 100%;
-    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
-    color: #FFFFFF;
-    height: 100vh;
-}
-.main2{
-    width: 80%;
-    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box;
-    color: #FFFFFF;
-    height: 100vh;
-}
+
 .section_title{
     text-align: left;
     font: italic normal 900 65px/86px Segoe UI;
     letter-spacing: 0px;
     color: #D00014;
     opacity: 0.45;
+    padding-top: 10vh;
+    padding-left: 5vh;
 }
 .explore_games{
+    width: 75%;
+    color: #FFFFFF;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 15px;
+    padding-top: 20px;
+    padding-left: 5vh;
 }
 .explore_games img{
     border: 1px solid #ddd;
@@ -162,10 +161,6 @@ main{
     padding: 5px;
     height: 25vh;
     width: 25vw;
-}
-main h1{
-    text-align: center;
-    color: #FF0000;
 }
 .explore_games div{
     background: #FFFFFF 0% 0% no-repeat padding-box;
