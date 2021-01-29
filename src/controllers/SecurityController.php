@@ -35,7 +35,7 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['User with this email not exist!']]);
         }
 
-        if ($user->getPassword() !== $password) {
+        if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
 
@@ -50,18 +50,21 @@ class SecurityController extends AppController {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $confirmedPassword = $_POST['confirmedPassword'];
         $user_name = $_POST['user_name'];
 
         if ($password !== $confirmedPassword) {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
+        if(password_verify($password, $hashed_password)){
+            //TODO try to use better hash function
+            $user = new User($email, $hashed_password, $user_name);
 
-        //TODO try to use better hash function
-        $user = new User($email, $password, $user_name);
+            $this->userRepository->addUser($user);
 
-        $this->userRepository->addUser($user);
+            return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+        }
 
-        return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
 }

@@ -13,8 +13,8 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button>NOTIFICATIONS</button>
-                <button>CHAT</button>
+                <button>Log Out</button>
+                <button>Lobby</button>
             </div>
         </div>
     </header>
