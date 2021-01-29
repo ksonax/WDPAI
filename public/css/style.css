@@ -1,17 +1,28 @@
+/* HTML CSS */
+html{
+    min-width: 100%;
+    min-height: 100%;
+    background: transparent linear-gradient(180deg, #202020 0%, #290000 100%) 0% 0% no-repeat padding-box fixed;
+
+}
 *{
     margin: 0;
     padding: 0;
     list-style: none;
     text-decoration: none;
 }
+
+/* HEADER CSS*/
 header{
+    z-index: 3;
     width: 100%;
     height: 60px;
     display: block;
     background-color: white;
+    position: fixed;
 }
 .inner_header{
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: block;
     margin: 0;
@@ -20,7 +31,7 @@ header{
     height: 100%;
     display: table;
     float: left;
-    padding-left: 10%;
+    padding-left: 4em;
 }
 .logo_container h1{
     color: black;
@@ -35,18 +46,20 @@ header{
 .header_buttons{
     float: right;
     height: 100%;
+    padding-right: 4em;
 }
 .header_buttons button{
     height: 100%;
     width: 10em;
     display: table;
     float: right;
-    padding: 0px 20px;
     color: white;
     background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #ffffff;
     border-radius: 45px;
 }
+
+/* LOGIN AND REGISTER CSS*/
 main{
     width: 100vw;
     height: 100vh;
@@ -63,7 +76,6 @@ main h1{
 .form{
     display: flex;
     flex-direction: column;
-    justify-content: top;
     align-items: center;
     height: 75vh;
     width: 75vw;
@@ -82,7 +94,7 @@ main h1{
     opacity: 1;
     margin: 1em;
     height: 5em;
-    width: 20em;
+    width: 30em;
     font: normal normal normal Segoe UI;
     letter-spacing: 0px;
     text-align: center;
@@ -99,92 +111,172 @@ main h1{
     color: white;
     margin: 1em;
 }
-.base-container{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 90%;
-}
+
+/* NAV CSS */
 nav{
     background: white;
-    width: 25%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 100px;
 }
 nav button{
     color: white;
     background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #000000;
     border-radius: 45px;
-    width: 80%;
+    width: 100%;
     height: 5em;
     color: white;
     margin: 1em;
 }
 .search-bar input{
+    width: 100%;
     text-align: center;
     font: normal normal normal 32px/45px Segoe UI;
     letter-spacing: 0px;
     color: #7A7A7A;
-    size: 0.5em;
 }
 .nav_buttons{
     margin: 1em;
-    padding: 1em;
+    padding-right: 2em;
 }
 
+/* ADD GAMES CSS */
+.add_games > form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.add_games > form > .title{
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    opacity: 1;
+    margin: 1em;
+    height: 5em;
+    width: 30em;
+    font: normal normal normal Segoe UI;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 1;
+}
+.add_games > form > textarea{
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    text-align: center;
+    width: 30em;
+    height: 20em;
+    color: white;
+}
+.add_games > form > .send_file{
+    display: inline-block;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    margin-top: 1em;
+    padding: 1em 1em;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    color: white;
+
+}
+.add_games > form > button{
+    color: white;
+    background: #B20011 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    border-radius: 45px;
+    width: 12em;
+    height: 5em;
+    color: white;
+    margin: 1em;
+}
+
+/* GAME SECTION CSS */
 .section_title{
     text-align: left;
     font: italic normal 900 65px/86px Segoe UI;
     letter-spacing: 0px;
-    color: #D00014;
-    opacity: 0.45;
+    color: #B20011;
+    opacity: 1;
     padding-top: 10vh;
-    padding-left: 5vh;
+    padding-left: 5em;
+    padding-bottom: 1em;
 }
+.base_container{
+    z-index: 1;
+}
+
+/* GAMES VIEW CSS */
 .explore_games{
-    width: 75%;
+    align-items: center;
     color: #FFFFFF;
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 15px;
+    column-gap: 5em;
+    row-gap: 20em;
     padding-top: 20px;
-    padding-left: 5vh;
+    padding-left: 400px;
 }
 .explore_games img{
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    height: 25vh;
-    width: 25vw;
+    width: 366px;
+    height: 200px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.explore_games h3 {
+    text-align: center;
+    font: normal normal bold 35px/30px Arial;
+    letter-spacing: 0px;
+    color: #B20011;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 .explore_games div{
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    border: 1px solid #95989A;
     color: #000000;
-    height: auto;
-    width: auto;
+    width: 366px;
+    height: 200px;
 }
-.game h4{
+.explore_games h4{
     color: #B20011;
-    display: inline;
-    justify-content: space-between;
 }
-.game_photo{
-    height: 25vh;
-    width: 25vw;
+.explore_games p{
+    text-align: center;
 }
+.stats{
+    max-height: 20px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+}
+
+/* PLAYER CSS */
 .players{
+    align-items: center;
+    color: #FFFFFF;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 5em;
+    row-gap: 5em;
+    padding-top: 20px;
+    padding-left: 400px;
+    position: relative;
 }
 .player{
+    align-items: center;
     background: #3a3a3a 0% 0% no-repeat padding-box;
     color: #ffffff;
     height: auto;
@@ -197,10 +289,121 @@ nav button{
     background: transparent 0% 0% no-repeat padding-box;
     border: 1px solid #B20011;
 }
+
+/* TEMPLATES CSS */
 .no-valid {
     border: 3px solid red;
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
 }
+#game-template{
+    width: 75%;
+    color: #FFFFFF;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 15px;
+    padding-top: 20px;
+    padding-left: 5vh;
 
+}
+#explore-games img{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 366px;
+    height: 200px;
+}
+#explore-games div{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #95989A;
+    color: #000000;
+    width: 366px;
+    height: 262px;
+}
+#explore-games h4{
+    color: #B20011;
+    display: inline;
+    justify-content: space-between;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 900px) {
+    .form  input{
+        width: 90%;
+    }
+    .form{
+        margin-top: 100px;
+    }
+    nav{
+        min-width: 100%;
+        max-width: 100%;
+        justify-content: left;
+        display: flex;
+        height: 120px;
+        flex-direction: column;
+        top: initial;
+        left: initial;
+        overflow-y: hidden;
+        padding-top: 120px;
+    }
+    .search-bar > input{
+        width: 100%;
+        margin: 2px;
+        font: normal normal normal 25px/25px Segoe UI;
+        height: 25px;
+        padding-bottom: 0;
+    }
+    .nav_buttons > ul > li{
+        float: left;
+        padding: 0;
+    }
+    .nav_buttons{
+        padding: 0;
+        margin: 0;
+        height: 4em;
+
+    }
+    nav button{
+        border: none;
+        border-radius: 35px;
+    }
+    .search-bar{
+    }
+    .base_container{
+        padding-top: 150px;
+    }
+    .explore_games{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    .section_title{
+        font: italic normal 900 50px/65px Segoe UI;
+        padding-left: 0px;
+        padding-bottom: 10px;
+        padding-top: 2em;
+    }
+    .logo_container{
+        padding-left: 25%;
+    }
+    .header_buttons{
+        padding-right: 25%;
+        width: 5em;
+        display: inline;
+        float: initial;
+    }
+    .header_buttons > button{
+        height: 4em;
+    }
+    .players{
+        display: flex;
+        flex-direction: column;
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+
+}

@@ -20,47 +20,47 @@
             </div>
         </div>
     </header>
-    <main>
-        <nav>
-            <div class="search-bar">
-                <input placeholder="Search">
-            </div>
-            <div class="nav_buttons">
-                <ul>
-                    <li>
-                        <button onclick="location.href='my_games'">My Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='explore_games'">Explore Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='players'">Players</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='my_friends'">Friend List</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div>
-            <div class="section_title">
-                <h4>Explore Games</h4>
-            </div>
-            <section  class="explore_games">
-                <?php foreach($games as $game): ?>
-                    <div id="game-1">
-                        <img src="public/img/uploads/<?= $game->getImage(); ?>">
-                        <div>
-                            <h3><?= $game->getTitle(); ?></h3>
-                            <p><?= $game->getDescription(); ?></p>
+    <nav>
+        <div class="search-bar">
+            <input placeholder="Search">
+        </div>
+        <div class="nav_buttons">
+            <ul>
+                <li>
+                    <button onclick="location.href='my_games'">My Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='explore_games'">Explore Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='players'">Players</button>
+                </li>
+                <li>
+                    <button onclick="location.href='my_friends'">Friend List</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="base_container">
+        <div class="section_title">
+            <h4>Explore Games</h4>
+        </div>
+        <section  class="explore_games">
+            <?php foreach($games as $game): ?>
+                <div id="game-1">
+                    <img src="public/img/uploads/<?= $game->getImage(); ?>">
+                    <div class="games_info">
+                        <h3><?= $game->getTitle(); ?></h3>
+                        <p><?= $game->getDescription(); ?></p>
+                        <div class="stats">
                             <h4>Players Online</h4>
                             <h4>Players Waiting</h4>
                         </div>
                     </div>
-                <?php endforeach; ?>
-            </section>
-        </div>
-    </main>
+                </div>
+            <?php endforeach; ?>
+        </section>
+    </div>
 </body>
 
 <template id="game-template">
