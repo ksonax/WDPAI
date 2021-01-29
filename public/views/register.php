@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<?php include 'logged_in_header.php';?>
+<?php include 'logged_out_header.php';?>
 <main>
     <form class="form" action="register" method="POST">
         <h1 class="text"> Sign UP </h1>
