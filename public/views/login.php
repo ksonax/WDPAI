@@ -6,17 +6,7 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<header>
-    <div class="inner_header">
-        <div class="logo_container">
-            <h1>GAME<span>NTER</span></h1>
-        </div>
-        <div class="header_buttons">
-            <button>Sign In</button>
-            <button onclick="location.href='register'">Sing Up</button>
-        </div>
-    </div>
-</header>
+<?php include 'logged_out_header.php';?>
 <main>
     <form class="form" action="login" method="POST">
         <h1>Sign In</h1>
