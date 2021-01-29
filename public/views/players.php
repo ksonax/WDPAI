@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<header>
     <header>
         <div class="inner_header">
             <div class="logo_container">
@@ -19,130 +18,127 @@
             </div>
         </div>
     </header>
-</header>
+    <nav>
+        <div class="search-bar">
+            <input placeholder="Search">
+        </div>
+        <div class="nav_buttons">
+            <ul>
+                <li>
+                    <button onclick="location.href='my_games'">My Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='explore_games'">Explore Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='players'">Players</button>
+                </li>
+                <li>
+                    <button onclick="location.href='my_friends'">Friend List</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="base_container">
-        <nav>
-            <div class="search_bar">
-                <input placeholder="Search">
+        <div>
+            <h1 class="section_title">Players</h1>
+        </div>
+        <section  class="players">
+            <div id="player-1">
+                <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
+                <h3>UserName</h3>
+                <p>User description</p>
+                <h4>Recently Played With</h4>
+                <div class="played_recently">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                </div>
+
+                <h4>Recently Played Games</h4>
+                <div class="games_recently">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                </div>
             </div>
-            <div class="nav_buttons">
-                <ul>
-                    <li>
-                        <button onclick="location.href='my_games'">My Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='explore_games'">Explore Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='players'">Players</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='my_friends'">Friend List</button>
-                    </li>
-                </ul>
+            <div class="player">
+                <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
+                <h3>UserName</h3>
+                <p>User description</p>
+                <h4>Recently Played With</h4>
+                <div class="played_recently">
+                    <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                </div>
+
+                <h4>Recently Played Games</h4>
+                <div class="games_recently">
+                    <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                </div>
             </div>
-        </nav>
-        <main class="main2">
-            <div>
-                <h1 class="section_title">Players</h1>
+            <div class="player">
+                <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
+                <h3>UserName</h3>
+                <p>User description</p>
+                <h4>Recently Played With</h4>
+                <div class="played_recently">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                </div>
+
+                <h4>Recently Played Games</h4>
+                <div class="games_recently">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                </div>
             </div>
-            <section  class="players">
-                <div class="player">
-                    <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
-                    <h3>UserName</h3>
-                    <p>User description</p>
-                    <h4>Recently Played With</h4>
-                    <div class="played_recently">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                    </div>
-                    
-                    <h4>Recently Played Games</h4>
-                    <div class="games_recently">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                    </div>
+            <div class="player">
+                <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
+                <h3>UserName</h3>
+                <p>User description</p>
+                <h4>Recently Played With</h4>
+                <div class="played_recently">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
                 </div>
-                <div class="player">
-                    <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
-                    <h3>UserName</h3>
-                    <p>User description</p>
-                    <h4>Recently Played With</h4>
-                    <div class="played_recently">
-                        <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img  src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                    </div>
-                    
-                    <h4>Recently Played Games</h4>
-                    <div class="games_recently">
-                        <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img  src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                    </div>
+
+                <h4>Recently Played Games</h4>
+                <div class="games_recently">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
                 </div>
-                <div class="player">
-                    <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
-                    <h3>UserName</h3>
-                    <p>User description</p>
-                    <h4>Recently Played With</h4>
-                    <div class="played_recently">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                    </div>
-                    
-                    <h4>Recently Played Games</h4>
-                    <div class="games_recently">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                    </div>
+            </div>
+            <div class="player">
+                <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
+                <h3>UserName</h3>
+                <p>User description</p>
+                <h4>Recently Played With</h4>
+                <div class="played_recently">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
                 </div>
-                <div class="player">
-                    <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
-                    <h3>UserName</h3>
-                    <p>User description</p>
-                    <h4>Recently Played With</h4>
-                    <div class="played_recently">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                    </div>
-                    
-                    <h4>Recently Played Games</h4>
-                    <div class="games_recently">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                    </div>
+
+                <h4>Recently Played Games</h4>
+                <div class="games_recently">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
+                    <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
                 </div>
-                <div class="player">
-                    <img class="player_photo" src="public/img/avatar.png" alt="placeholder">
-                    <h3>UserName</h3>
-                    <p>User description</p>
-                    <h4>Recently Played With</h4>
-                    <div class="played_recently">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/avatar.png" alt="placeholder" height="50" wdth="50">
-                    </div>
-                    
-                    <h4>Recently Played Games</h4>
-                    <div class="games_recently">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                        <img src="public/img/unnamed.jpg" alt="placeholder" height="50" wdth="50">
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
     </div>
 </body>

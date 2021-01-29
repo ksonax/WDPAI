@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<header>
     <header>
         <div class="inner_header">
             <div class="logo_container">
@@ -20,51 +19,47 @@
             </div>
         </div>
     </header>
-</header>
+    <nav>
+        <div class="search-bar">
+            <input placeholder="Search">
+        </div>
+        <div class="nav_buttons">
+            <ul>
+                <li>
+                    <button onclick="location.href='my_games'">My Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='explore_games'">Explore Games</button>
+                </li>
+                <li>
+                    <button onclick="location.href='players'">Players</button>
+                </li>
+                <li>
+                    <button onclick="location.href='my_friends'">Friend List</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="base_container">
-        <nav>
-            <div class="search_bar">
-                <input placeholder="Search">
-            </div>
-            <div class="nav_buttons">
-                <ul>
-                    <li>
-                        <button onclick="location.href='my_games'">My Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='explore_games'">Explore Games</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='players'">Players</button>
-                    </li>
-                    <li>
-                        <button onclick="location.href='my_friends'">Friend List</button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <main class="main2">
-            <div>
-                <h1 class="section_title">ADD Games</h1>
-            </div>
-            <section  class="my_games">
-                <form action="add_games" method="POST" ENCTYPE="multipart/form-data">
-                    <div class="messages">
-                        <?php
-                        if(isset($messages)){
-                            foreach($messages as $message) {
-                                echo $message;
-                            }
+        <div>
+            <h1 class="section_title">ADD Games</h1>
+        </div>
+        <section  class="add_games">
+            <form action="add_games" " method="POST" ENCTYPE="multipart/form-data">
+                <div class="messages">
+                    <?php
+                    if(isset($messages)){
+                        foreach($messages as $message) {
+                            echo $message;
                         }
-                        ?>
-                    </div>
-                    <input name="title" type="text" placeholder="title">
-                    <textarea name ="description" rows="5" placeholder="description"></textarea>
-
-                    <input type="file" name="file"><br/>
-                    <button type="submit">ADD GAME</button>
-                </form>
-            </section>
-        </main>
+                    }
+                    ?>
+                </div>
+                <input class="title" name="title" type="text" placeholder="title">
+                <textarea name ="description" rows="5" placeholder="description"></textarea>
+                <input class="send_file" type="file" name="file"><br/>
+                <button type="submit">ADD GAME</button>
+            </form>
+        </section>
     </div>
 </body>

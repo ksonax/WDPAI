@@ -42,6 +42,11 @@ class GameController extends AppController
         $games = $this->gameRepository->getGames();
         $this->render('explore_games', ['games' => $games]);
     }
+    public function my_games()
+    {
+        $games = $this->gameRepository->getGames();
+        $this->render('my_games', ['games' => $games]);
+    }
 
     public function search()
     {
