@@ -50,15 +50,22 @@ class SecurityController extends AppController {
 
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $confirmedPassword = $_POST['confirmedPassword'];
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
         $user_name = $_POST['user_name'];
 
         if ($password !== $confirmedPassword) {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
-        if(password_verify($password, $hashed_password)){
-            //TODO try to use better hash function
+
+        if(empty($email) || empty($password || empty($confirmedPassword) || empty($user_name))){
+            return $this->render('register', ['messages' => ['You\'need to fill blank spaces!']]);
+        }
+        if(strlen($password)< 8){
+            return $this->render('register', ['messages' => ['Your\' password need to be at least 8 characters long!']]);
+        }
+
+        if( password_verify($password, $hashed_password) ){
             $user = new User($email, $hashed_password, $user_name);
 
             $this->userRepository->addUser($user);
