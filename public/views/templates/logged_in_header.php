@@ -16,7 +16,15 @@
                 <form class="logout_form"action="logout" method="GET">
                     <button name="logout" value="true" class="logout_button">Log Out</button>
                 </form>
-                <button class="lobby_button">Lobby</button>
+                <?php if(isset($_COOKIE['user'])):?>
+                <?php
+                $userRepository = new UserRepository();
+                $user = $userRepository->getUser((string)$_COOKIE['user']);
+                if($user->getEditPermission() == true):?>
+                <button onclick="location.href='add_games'" class="add_game_button">ADD GAME</button>
+                <?php else: ?>
+                <?php endif;?>
+                <?php endif;?>
             </div>
         </div>
     </header>

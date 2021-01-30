@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-<?php include 'logged_out_header.php';?>
+<?php include 'templates/logged_out_header.php';?>
 <main>
     <form class="form" action="login" method="POST">
         <h1>Sign In</h1>
@@ -31,7 +31,7 @@
 </body>
 </html>
 <?php else: ?>
-    <?
+    <?php
     $url = "http://$_SERVER[HTTP_HOST]";
     header("Location: {$url}/");
     return $this->render('explore_games');?>

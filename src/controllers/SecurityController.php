@@ -58,7 +58,7 @@ class SecurityController extends AppController {
 
         $email = (string)$_COOKIE['user'];
         $sessionRepository = new SessionRepository();
-        $sessionRepository->addSessionLog($email, "logged_out");
+        $sessionRepository->addSessionLog($email, "loggedOut");
 
         if (isset($_COOKIE['user'])) {
             if ($_GET['logout']) {
@@ -69,7 +69,7 @@ class SecurityController extends AppController {
                 return $this->render('main_page');
             }
         }
-        return $this->render('index');
+        return $this->render('main_page');
     }
 
     public function register()
@@ -81,22 +81,22 @@ class SecurityController extends AppController {
         $email = $_POST['email'];
         $password = $_POST['password'];
         $confirmedPassword = $_POST['confirmedPassword'];
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $user_name = $_POST['user_name'];
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $userName = $_POST['user_name'];
 
         if ($password !== $confirmedPassword) {
             return $this->render('register', ['messages' => ['Please provide proper password']]);
         }
 
-        if(empty($email) || empty($password || empty($confirmedPassword) || empty($user_name))){
+        if(empty($email) || empty($password || empty($confirmedPassword) || empty($userName))){
             return $this->render('register', ['messages' => ['You\'need to fill blank spaces!']]);
         }
         if(strlen($password)< 8){
             return $this->render('register', ['messages' => ['Your\' password need to be at least 8 characters long!']]);
         }
 
-        if( password_verify($password, $hashed_password) ){
-            $user = new User($email, $hashed_password, $user_name);
+        if( password_verify($password, $hashedPassword) ){
+            $user = new User($email, $hashedPassword, $userName, "user");
 
             $this->userRepository->addUser($user);
 

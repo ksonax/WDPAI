@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
 <?php if(isset($_COOKIE['user'])):?>
+<?php
+$userRepository = new UserRepository();
+$user = $userRepository->getUser((string)$_COOKIE['user']);
+if($user->getRole() == "admin"):?>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +12,8 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <?php include 'logged_in_header.php';?>
-    <?php include 'nav_bar.php';?>
+    <?php include 'templates/logged_in_header.php';?>
+    <?php include 'templates/nav_bar.php';?>
     <div class="base_container">
         <div>
             <h1 class="section_title">ADD Games</h1>
@@ -33,7 +37,12 @@
         </section>
     </div>
 </body>
-
+<?php else:?>
+<?
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/");
+    return $this->render('explore_games');?>
+<?php endif;?>
 <?php else: ?>
 <?
 $url = "http://$_SERVER[HTTP_HOST]";
