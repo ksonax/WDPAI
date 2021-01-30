@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
-    <?php include 'logged_in_header.php';?>
-    <?php include 'nav_bar.php';?>
+    <?php include 'templates/logged_in_header.php';?>
+    <?php include 'templates/nav_bar.php';?>
     <div class="base_container">
         <div>
             <h1 class="section_title">My Friends</h1>

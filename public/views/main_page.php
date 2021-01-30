@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php if(!isset($_COOKIE['user'])):?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,45 +26,16 @@
             <button onclick="location.href='register'">JOIN US!</button>
         </div>
     </div>
-    <div class="info">
-        <h1>Who we are?</h1>
-        <p>We are website desing for gamers, looking to find people to game with</p>
-        <p>#TODO</p>
-    </div>
-    <div class="content">
-        <div class="content_1">
-            <h2>CONTENT 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
-        <div class="content_2">
-            <h2>CONTENT 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
-        <div class="content_3">
-            <h2>CONTENT 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
-    </div>
-        <div class="info">
-            <h1>Who we are?</h1>
-            <p>We are website desing for gamers, looking to find people to game with</p>
-            <p>#TODO</p>
-        </div>
-    <div class="content">
-        <div class="content_1">
-            <h2>CONTENT 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
-        <div class="content_2">
-            <h2>CONTENT 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
-        <div class="content_3">
-            <h2>CONTENT 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, aliquid culpa dignissimos distinctio</p>
-        </div>
+    <?php include 'templates/content.php';?>
+    <?php include 'templates/content.php';?>
     <div class="footer">
         <p>Footer</p>
     </div>
 </body>
 </html>
+<?php else: ?>
+    <?php
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/");
+    return $this->render('explore_games');?>
+<?php endif; ?>

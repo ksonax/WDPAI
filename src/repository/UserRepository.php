@@ -24,7 +24,8 @@ class UserRepository extends Repository
         return new User(
             $user['email'],
             $user['password'],
-            $user['user_name']
+            $user['user_name'],
+            $user['roles']
         );
     }
 
@@ -49,15 +50,16 @@ class UserRepository extends Repository
             $date->format('Y-m-d')
         ]);
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users (email, password, id_user_details, created_at, session_id)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO users (email, password, id_user_details, created_at, session_id, roles)
+            VALUES (?, ?, ?, ?, ?, ?)
         ');
         $stmt->execute([
             $user->getEmail(),
             $user->getPassword(),
             $this->getUserDetailsId($user),
             $date->format('Y-m-d'),
-            $this->getSessionId($user)
+            $this->getSessionId($user),
+            $user->getRole()
         ]);
     }
 
