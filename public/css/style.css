@@ -44,12 +44,13 @@ header{
     font-weight: 100;
 }
 .header_buttons{
+    display: inline;
     float: right;
-    height: 100%;
+    height: inherit;
     padding-right: 4em;
 }
 .header_buttons button{
-    height: 100%;
+    height: inherit;
     width: 10em;
     display: table;
     float: right;
@@ -57,6 +58,13 @@ header{
     background: #B20011 0% 0% no-repeat padding-box;
     border: 1px solid #ffffff;
     border-radius: 45px;
+}
+.logout_form{
+    float: right;
+    height: inherit;
+}
+.lobby_button{
+    height: inherit;
 }
 
 /* LOGIN AND REGISTER CSS*/
@@ -391,13 +399,10 @@ nav button{
         padding-left: 25%;
     }
     .header_buttons{
-        padding-right: 25%;
+        padding-right: 50%;
         width: 5em;
         display: inline;
         float: initial;
-    }
-    .header_buttons > button{
-        height: 4em;
     }
     .players{
         display: flex;

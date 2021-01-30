@@ -13,6 +13,7 @@ Routing::get('players', 'DefaultController');
 Routing::get('my_friends', 'DefaultController');
 
 Routing::post('login', 'SecurityController');
+Routing::post('logout','SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::post('add_games', 'GameController');
 Routing::post('search', 'GameController');

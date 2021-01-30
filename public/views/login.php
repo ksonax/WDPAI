@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<?php if(!isset($_COOKIE['user'])):?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,3 +30,9 @@
 </main>
 </body>
 </html>
+<?php else: ?>
+    <?
+    $url = "http://$_SERVER[HTTP_HOST]";
+    header("Location: {$url}/");
+    return $this->render('explore_games');?>
+<?php endif; ?>

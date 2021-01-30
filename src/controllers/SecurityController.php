@@ -17,7 +17,11 @@ class SecurityController extends AppController {
     public function login()
     {
         $userRepository = new UserRepository();
-
+        if (isset($_COOKIE['user'])) {
+            if (isset($_COOKIE['user'])){
+                header("location:javascript://history.go(-1)");
+            }
+        }
         if (!$this->isPost()) {
             return $this->render('login');
         }
@@ -38,10 +42,25 @@ class SecurityController extends AppController {
         if (!password_verify($password, $user->getPassword())) {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
-
+        setcookie('user', $user->getEmail(), time() + (60*60));
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/explore_games");
     }
+
+    public function logout()
+    {
+        if (isset($_COOKIE['user'])) {
+            if ($_GET['logout']) {
+
+                setcookie('user', null, time() - 600); //delete cookies by set time in the past
+                $url = "http://$_SERVER[HTTP_HOST]";
+                header("Location: {$url}/");
+                return $this->render('main_page');
+            }
+        }
+        return $this->render('index');
+    }
+
     public function register()
     {
         if (!$this->isPost()) {
@@ -70,8 +89,10 @@ class SecurityController extends AppController {
 
             $this->userRepository->addUser($user);
 
+            /* TODO
+             *$this->permissionRepository->addRoles($user);
+            */
             return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
         }
-
     }
 }

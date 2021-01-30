@@ -13,8 +13,10 @@
                 <h1>GAME<span>NTER</span></h1>
             </div>
             <div class="header_buttons">
-                <button>Log Out</button>
-                <button>Lobby</button>
+                <form class="logout_form"action="logout" method="GET">
+                    <button name="logout" value="true" class="logout_button">Log Out</button>
+                </form>
+                <button class="lobby_button">Lobby</button>
             </div>
         </div>
     </header>
