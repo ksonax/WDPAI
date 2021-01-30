@@ -20,8 +20,8 @@ class UserRepository extends Repository
         if ($user == false) {
             return null;
         }
-
         return new User(
+            $user['id'],
             $user['email'],
             $user['password'],
             $user['user_name']

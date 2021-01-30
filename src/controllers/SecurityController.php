@@ -3,15 +3,18 @@
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/PermissionRepository.php';
 
 class SecurityController extends AppController {
 
     private $userRepository;
+    private $permissionRepository;
 
     public function __construct()
     {
         parent::__construct();
         $this->userRepository = new UserRepository();
+        $this->permissionRepository = new PermissionRepository();
     }
 
     public function login()
@@ -69,6 +72,7 @@ class SecurityController extends AppController {
             $user = new User($email, $hashed_password, $user_name);
 
             $this->userRepository->addUser($user);
+            $this->permissionRepository->addRoles($user);
 
             return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
         }
