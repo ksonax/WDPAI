@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php if(isset($_COOKIE['user'])):?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,3 +33,10 @@
         </section>
     </div>
 </body>
+
+<?php else: ?>
+<?
+$url = "http://$_SERVER[HTTP_HOST]";
+header("Location: {$url}/");
+return $this->render('main_page');?>
+<?php endif; ?>
