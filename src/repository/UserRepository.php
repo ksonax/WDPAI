@@ -38,16 +38,26 @@ class UserRepository extends Repository
         $stmt->execute([
             $user->getUserName()
         ]);
-        $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
-            INSERT INTO users (email, password, id_user_details, created_at)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO sessions (status,email, last_session)
+            VALUES (?,?,?)
+        ');
+        $date = new DateTime();
+        $stmt->execute([
+            $user->getStatus(),
+            $user->getEmail(),
+            $date->format('Y-m-d')
+        ]);
+        $stmt = $this->database->connect()->prepare('
+            INSERT INTO users (email, password, id_user_details, created_at, session_id)
+            VALUES (?, ?, ?, ?, ?)
         ');
         $stmt->execute([
             $user->getEmail(),
             $user->getPassword(),
             $this->getUserDetailsId($user),
-            $date->format('Y-m-d')
+            $date->format('Y-m-d'),
+            $this->getSessionId($user)
         ]);
     }
 
@@ -62,4 +72,16 @@ class UserRepository extends Repository
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         return $data['id'];
     }
+    public function getSessionId(User $user): int
+    {
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM public.sessions WHERE email = :email
+        ');
+        $stmt->bindParam(':email', $user->getEmail(), PDO::PARAM_STR);
+        $stmt->execute();
+
+        $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $data['id'];
+    }
+
 }
