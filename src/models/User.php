@@ -6,6 +6,7 @@ class User
     private $email;
     private $password;
     private $user_name;
+    private $status = "registered";
 
     public function __construct(string $email, string $password, string $user_name)
     {
@@ -28,6 +29,12 @@ class User
     {
         return $this->user_name;
     }
+    public function getStatus(): string
+    {
+        return $this->status;
+    }
+
+
 
 
 }

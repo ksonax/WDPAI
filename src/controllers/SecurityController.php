@@ -2,21 +2,26 @@
 
 require_once 'AppController.php';
 require_once __DIR__ .'/../models/User.php';
+require_once __DIR__ .'/../models/Session.php';
 require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__.'/../repository/SessionRepository.php';
 
 class SecurityController extends AppController {
 
     private $userRepository;
+    private $sessionRepository;
 
     public function __construct()
     {
         parent::__construct();
         $this->userRepository = new UserRepository();
+        $this->sessionRepository = new SessionRepository();
     }
 
     public function login()
     {
         $userRepository = new UserRepository();
+        $sessionRepository = new SessionRepository();
         if (isset($_COOKIE['user'])) {
             if (isset($_COOKIE['user'])){
                 header("location:javascript://history.go(-1)");
@@ -43,12 +48,18 @@ class SecurityController extends AppController {
             return $this->render('login', ['messages' => ['Wrong password!']]);
         }
         setcookie('user', $user->getEmail(), time() + (60*60));
+        $sessionRepository->addSessionLog($user->getEmail(), "logged_in");
         $url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/explore_games");
     }
 
     public function logout()
     {
+
+        $email = (string)$_COOKIE['user'];
+        $sessionRepository = new SessionRepository();
+        $sessionRepository->addSessionLog($email, "logged_out");
+
         if (isset($_COOKIE['user'])) {
             if ($_GET['logout']) {
 

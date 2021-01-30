@@ -27,8 +27,7 @@ class GameRepository extends Repository
         );
     }
 
-    public function addGame(Games $game): void
-    {
+    public function addGame(Games $game): void {
         $date = new DateTime();
         $stmt = $this->database->connect()->prepare('
             INSERT INTO games (title, description, image, created_at)
